@@ -1,0 +1,15 @@
+/* Navbar */
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #3B2F2F;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #3B2F2F;
+    opacity: 0.75;
+}
+
+.navbar .nav-link.active {
+    color: #3B2F2F;
+}

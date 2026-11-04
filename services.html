@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seven Seas | Services</title>
+
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Google Fonts: Handlee (headings), Quicksand (sub-headings and buttons) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Quicksand:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS Link -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/seven-seas-logo.png" alt="Seven Seas logo" width="30">
+                Seven Seas Spa
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="services.html"><strong>Services</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero hero-short d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 hero-content text-center">
+                    <h1 class="hero-title mb-3">Our Services</h1>
+                    <p class="hero-subtitle mb-0">Explore what we have to offer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+
+        <!-- Yoga Classes -->
+        <section id="yoga" class="service-section py-5">
+            <div class="container">
+                <div class="row align-items-center g-4 g-lg-5">
+                    <div class="col-12 col-lg-6">
+                        <img src="assets/images/yoga-card.jpg" class="service-photo" alt="Group doing yoga stretches on a lakeside terrace at sunrise">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h2 class="section-title mb-3">Yoga Classes</h2>
+                        <p>Our yoga classes, led by experienced instructors, aim to improve flexibility and reduce stress. We offer styles for all levels, promoting strength, balance and inner peace. Join us to experience the benefits of yoga in a supportive environment.</p>
+                        <div class="timetable mb-4">
+                            <h3 class="timetable-title"><i class="fa-regular fa-calendar me-2" aria-hidden="true"></i>Timetable</h3>
+                            <div class="table-responsive">
+                                <table class="table timetable-table mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Day</th>
+                                            <th scope="col">Time</th>
+                                            <th scope="col">Class</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Monday</td>
+                                            <td>10:00 &ndash; 11:00</td>
+                                            <td>Beginner Yoga</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tuesday</td>
+                                            <td>18:00 &ndash; 19:00</td>
+                                            <td>Intermediate Yoga</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wednesday</td>
+                                            <td>10:00 &ndash; 11:00</td>
+                                            <td>Advanced Yoga</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="btn btn-brand btn-lg px-4 mt-2">Contact Us to Join a Class</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nutritional Advice -->
+        <section id="nutrition" class="service-section py-5 service-band">
+            <div class="container">
+                <div class="row align-items-center g-4 g-lg-5">
+                    <div class="col-12 col-lg-6 order-lg-2">
+                        <img src="assets/images/nutritional-advice-card.jpg" class="service-photo" alt="Nutritionist going through a plan with a client over a table of fresh food">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h2 class="section-title mb-3">Nutritional Advice</h2>
+                        <p>Our nutritional advice service is designed to help you eat healthier and feel better. Our experienced nutritionists will work with you to create a personalised nutrition plan based on your health goals and dietary needs.</p>
+                        <p>Whether you're looking to lose weight, manage a health condition, or simply improve your eating habits, our team can provide the guidance and support you need. We believe in a balanced, sustainable approach to nutrition, and we'll help you make positive changes that you can maintain in the long term.</p>
+                        <a href="contact.html" class="btn btn-brand btn-lg px-4 mt-2">Contact Us for Nutritional Advice</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mental Health Support -->
+        <section id="mental-health" class="service-section py-5">
+            <div class="container">
+                <div class="row align-items-center g-4 g-lg-5">
+                    <div class="col-12 col-lg-6">
+                        <img src="assets/images/mental-health-card.jpg" class="service-photo" alt="Two people talking in a calm outdoor lounge overlooking a lake">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h2 class="section-title mb-3">Mental Health Support</h2>
+                        <p>Our mental health support services are designed to provide a safe, supportive environment for individuals seeking help. We understand that mental health is just as important as physical health, and our team of experienced professionals is here to help you navigate your journey.</p>
+                        <p>We offer a range of services, including individual counselling, group therapy, stress management workshops and mindfulness training. Whether you're dealing with stress, anxiety, depression, or just need someone to talk to, we're here to support you. Remember, it's okay to ask for help.</p>
+                        <a href="contact.html" class="btn btn-brand btn-lg px-4 mt-2">Contact Us for Mental Health Support</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wellness Programs -->
+        <section id="wellness" class="service-section py-5 service-band">
+            <div class="container">
+                <div class="row align-items-center g-4 g-lg-5">
+                    <div class="col-12 col-lg-6 order-lg-2">
+                        <img src="assets/images/wellness-program-card.jpg" class="service-photo" alt="Group holding balance poses together on a lakeside terrace">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h2 class="section-title mb-3">Wellness Programs</h2>
+                        <p>Our wellness programs are designed to promote overall health and wellbeing. We offer a variety of programs that focus on different aspects of wellness, including physical fitness, nutrition, stress management and mental health.</p>
+                        <p>Our programs are led by experienced professionals and are tailored to meet the needs of individuals at all levels of health and fitness. Whether you're looking to get in shape, eat healthier, manage stress, or improve your mental health, our wellness programs can help you achieve your goals and live a healthier, happier life.</p>
+                        <a href="contact.html" class="btn btn-brand btn-lg px-4 mt-2">Join Our Wellness Program</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer mt-5 py-4">
+        <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+            <p class="mb-0">&copy; <span id="year">2026</span> Seven Seas Spa</p>
+            <ul class="social-links list-unstyled d-flex gap-3 mb-0">
+                <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Keep the copyright year current -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Bootstrap JS link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Font Awesome link -->
+    <script src="https://kit.fontawesome.com/5ec5e6d1dd.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

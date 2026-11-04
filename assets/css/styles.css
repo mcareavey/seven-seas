@@ -133,16 +133,12 @@ main {
     overflow: hidden;
 }
 
-/* Fixed 200px image height; object-fit crops each photo to fill it without stretching */
+/* All service photos are prepared at 3:2, so a 3:2 frame shows the whole photo at every screen
+   size with nothing cropped (about 200px tall when the cards are four across on desktop).
+   object-fit: cover is a safety net in case a photo of a different shape is swapped in. */
 .service-card .card-img-top {
-    height: 200px;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
-    object-position: center;
-}
-
-/* For photos where the subject sits near the top (e.g. faces in the mental health image) */
-.service-card .card-img-top.img-anchor-top {
-    object-position: center top;
 }
 
 .service-card .card-title {
@@ -366,11 +362,10 @@ main {
     overflow: hidden;
 }
 
-/* 4:3 crop of the square photos, nudged up to keep faces in frame */
+/* Team photos are square, so a square frame shows them in full with no heads cut off */
 .team-card .card-img-top {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    object-position: center 25%;
 }
 
 .team-card .card-title {
@@ -391,4 +386,65 @@ main {
 .team-card .card-text {
     font-size: 0.95rem;
     color: #3B2F2F;
+}
+
+/* Services page: alternating white / cream bands */
+.service-band {
+    background-color: #FFF6EC;
+}
+
+.service-section p {
+    color: #3B2F2F;
+}
+
+/* Rounded, shadowed photo. 3:2 matches the photos, so they show in full with no cropping */
+.service-photo {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(59, 47, 47, 0.15);
+}
+
+/* Yoga timetable in its own white box */
+.timetable {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 0.25rem 1rem rgba(59, 47, 47, 0.08);
+}
+
+.timetable-title {
+    font-family: "Handlee", cursive;
+    font-size: 1.4rem;
+    color: #3B2F2F;
+    margin-bottom: 0.75rem;
+}
+
+.timetable-title i {
+    color: #6F4E37;
+}
+
+.timetable-table {
+    --bs-table-color: #3B2F2F;
+    --bs-table-bg: transparent;
+    font-size: 0.95rem;
+}
+
+.timetable-table thead th {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #6F4E37;
+    border-bottom: 2px solid #FFEBD4;
+}
+
+.timetable-table tbody tr:nth-child(odd) td {
+    background-color: #FFF6EC;
+}
+
+.timetable-table td {
+    border-bottom-color: #FFEBD4;
 }

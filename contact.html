@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seven Seas | Contact</title>
+
+    <!-- Bootstrap CSS Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Google Fonts: Handlee (headings), Quicksand (sub-headings and buttons) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Quicksand:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS Link -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/images/seven-seas-logo.png" alt="Seven Seas logo" width="30">
+                Seven Seas Spa
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html"><strong>Contact</strong></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero hero-short d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 hero-content text-center">
+                    <h1 class="hero-title mb-3">Get in Touch</h1>
+                    <p class="hero-subtitle mb-0">We'd love to hear from you!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+
+        <!-- Content -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-8">
+
+                        <!-- Contact form card -->
+                        <div class="card contact-card border-0 shadow">
+                            <div class="card-body p-4 p-md-5">
+                                <h2 class="section-title text-center mb-4">Contact Us</h2>
+                                <p class="lead text-center">We're
+                                    here to help and answer any question you might have. We look forward to hearing from
+                                    you.</p>
+                                <!-- The browser checks the required fields; once they're valid,
+                                     the button's formaction sends the visitor to thankyou.html -->
+                                <form id="contactForm">
+                                    <div class="row g-3">
+                                        <div class="col-12 col-md-6">
+                                            <label for="name" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="name" name="name"
+                                                autocomplete="name" required>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email"
+                                                autocomplete="email" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="subject" class="form-label">Subject</label>
+                                            <input type="text" class="form-control" id="subject" name="subject"
+                                                required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="message" class="form-label">Message</label>
+                                            <textarea class="form-control" id="message" name="message" rows="6"
+                                                required></textarea>
+                                        </div>
+                                        <div class="col-12 text-center mt-4">
+                                            <button type="submit" class="btn btn-brand btn-lg px-5"
+                                                formaction="thankyou.html" formmethod="get">Send Message</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer mt-5 py-4">
+        <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+            <p class="mb-0">&copy; <span id="year">2026</span> Seven Seas Spa</p>
+            <ul class="social-links list-unstyled d-flex gap-3 mb-0">
+                <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Keep the copyright year current -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Bootstrap JS link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Font Awesome link -->
+    <script src="https://kit.fontawesome.com/5ec5e6d1dd.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

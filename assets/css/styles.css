@@ -1,3 +1,16 @@
+/* The navbar is fixed-top (56px tall), so push the page down to stop it covering content */
+body {
+    padding-top: 56px;
+    /* Sticky footer: on short pages, main grows to push the footer to the bottom of the screen */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
 /* Navbar */
 .navbar .navbar-brand,
 .navbar .nav-link {
@@ -89,6 +102,20 @@
     .hero {
         min-height: 70vh;
         padding: 4rem 0;
+    }
+}
+
+/* Shorter hero for inner pages (e.g. Contact) so the page content is visible straight away.
+   Placed after the rules above so it overrides both the desktop and mobile heights. */
+.hero.hero-short {
+    min-height: 35vh;
+    padding: 3rem 0;
+}
+
+@media (max-width: 767.98px) {
+    .hero.hero-short {
+        min-height: 30vh;
+        padding: 2.5rem 0;
     }
 }
 
@@ -252,4 +279,116 @@
 .social-links a:focus {
     color: #FFEBD4;
     opacity: 0.7;
+}
+
+/* Contact form */
+.contact-card {
+    border-radius: 1rem;
+}
+
+.contact-card .form-label {
+    color: #3B2F2F;
+    font-weight: 600;
+}
+
+.contact-card .form-control:focus {
+    border-color: #6F4E37;
+    box-shadow: 0 0 0 0.25rem rgba(111, 78, 55, 0.2);
+}
+
+/* Brand button: brown with cream text, using Bootstrap's button variables so every state matches */
+.btn-brand {
+    --bs-btn-color: #FFEBD4;
+    --bs-btn-bg: #3B2F2F;
+    --bs-btn-border-color: #3B2F2F;
+    --bs-btn-hover-color: #FFEBD4;
+    --bs-btn-hover-bg: #6F4E37;
+    --bs-btn-hover-border-color: #6F4E37;
+    --bs-btn-active-color: #FFEBD4;
+    --bs-btn-active-bg: #6F4E37;
+    --bs-btn-active-border-color: #6F4E37;
+    --bs-btn-focus-shadow-rgb: 111, 78, 55;
+    --bs-btn-border-radius: 2rem;
+    --bs-btn-font-weight: 600;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* Outline version of the brand button (e.g. secondary actions on the thank-you page) */
+.btn-outline-brand {
+    --bs-btn-color: #3B2F2F;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: #3B2F2F;
+    --bs-btn-hover-color: #FFEBD4;
+    --bs-btn-hover-bg: #3B2F2F;
+    --bs-btn-hover-border-color: #3B2F2F;
+    --bs-btn-active-color: #FFEBD4;
+    --bs-btn-active-bg: #3B2F2F;
+    --bs-btn-active-border-color: #3B2F2F;
+    --bs-btn-focus-shadow-rgb: 111, 78, 55;
+    --bs-btn-border-radius: 2rem;
+    --bs-btn-font-weight: 600;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* Larger version of the round tip icon, used for the tick on the thank-you page */
+.thankyou-icon {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2.25rem;
+}
+
+/* About page: Who We Are / Our Mission boxes on the same cream band as the wellness tips */
+.about-intro {
+    background-color: #FFF6EC;
+}
+
+.about-box {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    color: #3B2F2F;
+    box-shadow: 0 0.25rem 1rem rgba(59, 47, 47, 0.08);
+}
+
+.about-box .tip-icon {
+    margin: 0 0 1rem;
+}
+
+.section-intro {
+    color: #3B2F2F;
+}
+
+/* About page: team cards share the service card look */
+.team-card {
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1rem rgba(59, 47, 47, 0.12);
+    overflow: hidden;
+}
+
+/* 4:3 crop of the square photos, nudged up to keep faces in frame */
+.team-card .card-img-top {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.team-card .card-title {
+    font-family: "Handlee", cursive;
+    font-size: 1.5rem;
+    color: #3B2F2F;
+}
+
+.team-role {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #6F4E37;
+}
+
+.team-card .card-text {
+    font-size: 0.95rem;
+    color: #3B2F2F;
 }

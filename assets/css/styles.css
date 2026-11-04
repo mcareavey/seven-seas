@@ -13,3 +13,243 @@
 .navbar .nav-link.active {
     color: #3B2F2F;
 }
+
+/* Hero */
+.hero {
+    min-height: 80vh;
+    padding: 6rem 0;
+    /* Top-to-bottom gradient overlay: darkest at the top (bright sky) and bottom,
+       slightly lighter through the middle so the scene still shows behind the text */
+    background-image:
+        linear-gradient(180deg,
+            rgba(59, 47, 47, 0.75) 0%,
+            rgba(59, 47, 47, 0.6) 50%,
+            rgba(59, 47, 47, 0.85) 100%),
+        url("../images/hero-image-1600x900.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #FFEBD4;
+}
+
+/*
+ * Hero text is sized from the width of its own column (cqi units), not the screen (vw).
+ * Bootstrap's container widens in steps at each breakpoint, so vw-based sizes could
+ * outgrow the column just before a step and flip between one and two lines.
+ * 1cqi = 1% of the .hero-content column's width.
+ */
+.hero-content {
+    container-type: inline-size;
+}
+
+/* Handwritten heading. Its one-line width is about 11.6x its font size,
+   so 8cqi keeps it on one line with a little room to spare at every width. */
+.hero-title {
+    font-family: "Handlee", cursive;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 8cqi, 4.5rem);
+    line-height: 1.2;
+    text-wrap: balance;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.hero-subtitle {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    /* One-line width is about 26x its font size, so 3.5cqi fits once the column is wide
+       enough; below that the 1rem minimum applies and it wraps to two lines. */
+    font-size: clamp(1rem, 3.5cqi, 1.35rem);
+    letter-spacing: 0.02em;
+    text-wrap: balance;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Uses Bootstrap's button variables so the #3B2F2F text holds in every state
+   (normal, hover, focus, click). Hover/click swap the background to the hero cream. */
+.btn-hero {
+    --bs-btn-color: #3B2F2F;
+    --bs-btn-bg: #fff;
+    --bs-btn-border-color: #fff;
+    --bs-btn-hover-color: #3B2F2F;
+    --bs-btn-hover-bg: #FFEBD4;
+    --bs-btn-hover-border-color: #FFEBD4;
+    --bs-btn-active-color: #3B2F2F;
+    --bs-btn-active-bg: #FFEBD4;
+    --bs-btn-active-border-color: #FFEBD4;
+    --bs-btn-focus-shadow-rgb: 255, 235, 212;
+    --bs-btn-border-radius: 2rem;
+    --bs-btn-font-weight: 600;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* Shorter hero on small screens */
+@media (max-width: 767.98px) {
+    .hero {
+        min-height: 70vh;
+        padding: 4rem 0;
+    }
+}
+
+/* Section headings (Our Services, Testimonials) */
+.section-title {
+    font-family: "Handlee", cursive;
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: #3B2F2F;
+}
+
+/* Service cards */
+.service-card {
+    border: 0;
+    box-shadow: 0 0.25rem 1rem rgba(59, 47, 47, 0.12);
+    overflow: hidden;
+}
+
+/* Fixed 200px image height; object-fit crops each photo to fill it without stretching */
+.service-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* For photos where the subject sits near the top (e.g. faces in the mental health image) */
+.service-card .card-img-top.img-anchor-top {
+    object-position: center top;
+}
+
+.service-card .card-title {
+    font-family: "Handlee", cursive;
+    font-size: 1.25rem;
+    color: #3B2F2F;
+}
+
+.service-card .card-text {
+    font-size: 0.95rem;
+    color: #3B2F2F;
+}
+
+/* Testimonials carousel */
+.testimonial {
+    /* Side padding keeps the quote clear of the prev/next arrows */
+    padding: 1rem 3.5rem 3.5rem;
+    margin: 0;
+}
+
+/* Equal-height slides on phones, where the quotes wrap to different line counts,
+   so the page below doesn't jump as the carousel moves between slides */
+@media (max-width: 575.98px) {
+    .testimonial {
+        padding-left: 2.75rem;
+        padding-right: 2.75rem;
+        min-height: 24.5rem;
+    }
+}
+
+.testimonial-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0.25rem 0.75rem rgba(59, 47, 47, 0.2);
+}
+
+.testimonial blockquote p {
+    max-width: 45rem;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: #3B2F2F;
+}
+
+.testimonial figcaption {
+    color: #6F4E37;
+    font-weight: 600;
+}
+
+/* Cap the carousel width so the arrows sit close to the quote on wide screens
+   instead of out at the edges of the container */
+.testimonial-carousel {
+    max-width: 52rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Arrows and indicator dots in the brand brown */
+.testimonial-carousel .carousel-control-prev,
+.testimonial-carousel .carousel-control-next {
+    width: 3rem;
+}
+
+.testimonial-carousel .carousel-indicators [data-bs-target] {
+    background-color: #3B2F2F;
+}
+
+/* Wellness tips: soft cream band with a tile per tip */
+.wellness-tips {
+    background-color: #FFF6EC;
+}
+
+.wellness-intro {
+    max-width: 48rem;
+    color: #3B2F2F;
+}
+
+.tip {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 0.25rem 1rem rgba(59, 47, 47, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tip:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1.5rem rgba(59, 47, 47, 0.14);
+}
+
+.tip-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #6F4E37;
+    background-color: #FFEBD4;
+}
+
+.tip-title {
+    font-family: "Handlee", cursive;
+    font-size: 1.3rem;
+    color: #3B2F2F;
+    margin-bottom: 0.5rem;
+}
+
+.tip-text {
+    font-size: 0.95rem;
+    color: #3B2F2F;
+    margin-bottom: 0;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #6F4E37;
+    color: #FFEBD4;
+    font-size: 0.95rem;
+}
+
+.social-links a {
+    color: #FFEBD4;
+    font-size: 1.25rem;
+    transition: opacity 0.2s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+    color: #FFEBD4;
+    opacity: 0.7;
+}
